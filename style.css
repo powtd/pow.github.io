@@ -95,7 +95,7 @@ h2 {
     height: 5.5vw !important;
   }
   #link-resource {
-    font-size: calc(15 * var(--unit)) !important;
+    font-size: calc(20 * var(--unit)) !important;
   }
 }
 @media only screen and (max-width: 1024px) {
