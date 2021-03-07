@@ -99,6 +99,9 @@ h2 {
     margin-left: 5vw;
     margin-right: 5vw;
   }
+  .title-p {
+    font-size: calc(25 * var(--unit));
+  }
 }
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
