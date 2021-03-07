@@ -105,7 +105,7 @@ h2 {
   }
 }
 .title {
-  height: 30vw;
+  height: 50vw;
 }
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
