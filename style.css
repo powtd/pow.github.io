@@ -108,6 +108,9 @@ h2 {
   .show-case {
     margin-bottom: 35vw !important;
   }
+  .social {
+    margin: 25vw auto;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
