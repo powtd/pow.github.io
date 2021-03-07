@@ -100,7 +100,7 @@ h2 {
     margin-right: 5vw;
   }
   .title-p {
-    font-size: calc(25 * var(--unit));
+    font-size: calc(30 * var(--unit)) !important;
   }
 }
 @media only screen and (max-width: 1024px) {
