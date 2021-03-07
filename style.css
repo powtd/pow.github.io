@@ -103,6 +103,9 @@ h2 {
     font-size: calc(30 * var(--unit)) !important;
   }
 }
+.title {
+  height: 30vw;
+}
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
   .switch {
