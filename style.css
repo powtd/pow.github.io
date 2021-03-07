@@ -25,7 +25,6 @@ body {
   padding: 1vw;
   margin: 13vw auto;
   margin-bottom: 15vw;
-  background-color: aqua;
 }
 h1 {
   font-size: 19vmin;
@@ -103,10 +102,11 @@ h2 {
   .title-p {
     font-size: calc(30 * var(--unit)) !important;
   }
+  .title {
+    height: 70vw;
+  }
 }
-.title {
-  height: 50vw;
-}
+
 @media only screen and (max-width: 1024px) {
   /* For mobile phones: */
   .switch {
