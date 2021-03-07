@@ -21,7 +21,7 @@ function randomText(id) {
     const theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-";
     let word = document.getElementById(id)
     let w = word.textContent
-    let speed = 60;
+    let speed = 50;
     let increment = 5;
 
     let si = 0;
