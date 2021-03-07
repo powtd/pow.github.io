@@ -106,7 +106,7 @@ h2 {
     height: 70vw;
   }
   .show-case {
-    margin-bottom: 10vw;
+    margin-bottom: 20vw !important;
   }
 }
 
