@@ -18,17 +18,17 @@ document.getElementById("text-2").onmouseleave = function () {
 };
 
 function randomText(id) {
-    const theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-"; //You can customize what letters it will cycle through
+    const theLetters = "abcdefghijklmnopqrstuvwxyz#%&^+=-";
     let word = document.getElementById(id)
-    let w = word.textContent // Your text goes here
-    let speed = 50; // ms per frame
-    let increment = 8; // frames per step. Must be >2
+    let w = word.textContent
+    let speed = 60;
+    let increment = 5;
 
     let si = 0;
     let count = 0;
     let block = "";
     let fixed = "";
-    //Call self x times, whole function wrapped in setTimeout
+
     (function r(i) {
         setTimeout(function () {
             if (--i) { r(i); }
@@ -38,9 +38,7 @@ function randomText(id) {
     })(w.length * increment + 1);
     function nextFrame(pos) {
         for (let i = 0; i < w.length - count; i++) {
-            //Random number
             let num = Math.floor(theLetters.length * Math.random());
-            //Get random letter
             let letter = theLetters.charAt(num);
             block = block + letter;
         }
@@ -48,8 +46,6 @@ function randomText(id) {
             count++;
         }
         if (si == increment) {
-            // Add a letter; 
-            // every speed*10 ms
             fixed = fixed + w.charAt(count - 1);
             si = 0;
         }
@@ -57,8 +53,6 @@ function randomText(id) {
         block = "";
     }
 }
-
-
 
 var randomEffect = function () {
     var randomString = '';
