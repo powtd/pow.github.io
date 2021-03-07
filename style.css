@@ -96,6 +96,8 @@ h2 {
   }
   #link-resource {
     font-size: calc(30 * var(--unit)) !important;
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }
 @media only screen and (max-width: 1024px) {
