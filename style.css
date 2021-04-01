@@ -234,7 +234,9 @@ div.scrollmenu a {
   width: 30vw;
   height: 30vw;
   object-fit: cover;
+  overflow: hidden;
 }
+
 #demo-title{
   font-size: calc(20 * var(--unit));
 }
