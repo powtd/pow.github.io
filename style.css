@@ -77,9 +77,9 @@
   .demo-item:hover{
     box-shadow: 4px 4px !important;
   }
-  .demo-img{
-    height: 20vw !important;
-    width: 20vw !important;
+  .demo-img {
+    height: 25vw !important;
+    width: 25vw !important;
     margin-top: 1.5vw !important;
     border: 3px solid var(--bl) !important;
   }
@@ -143,7 +143,7 @@
   }
   .demo-item span{
     width: 15vw !important;
-    font-size: calc(18 * var(--unit)) !important;
+    font-size: calc(20 * var(--unit)) !important;
   }
 }
 
@@ -364,7 +364,7 @@ div.scrollmenu {
   color: var(--text);
   border-radius: 10px;
   border: 4px solid var(--bl);
-  background-color: var(--c5);
+  background-color: var(--wh);
 }
 .git-item{
   background-color: #e3e5e8;
