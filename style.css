@@ -364,7 +364,7 @@ div.scrollmenu {
   color: var(--text);
   border-radius: 10px;
   border: 4px solid var(--bl);
-  background-color: var(--wh);
+  
 }
 .git-item{
   background-color: #e3e5e8;
