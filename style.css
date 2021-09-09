@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+:root {
+  --c1: #1c1b1c;
+  --c2: #1c1b1c;
+  --c3: #1c1b1c;
+  --color1:hsl(180, 100%, 50%);
+  --color2:hsl(180, 50%, 50%);
+  --color3:hsl(180, 100%, 50%);
+}
+
+.App{
+  width: 100%;
+  height: 100%;
+  
+  font-family: 'Press Start 2P', sans-serif;
+}
+.content{
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background-color: #242424;
+}
+.material-icons{
+  font-size: 40px;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #e6e6e6;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ----------------------------------------------------------*/
+
+.menu{
+  list-style: none;
+  display: flex;
+  background-color: var(--c2);
+}
+
+.submenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.submenu .submenu{
+  left: 100%;
+  top: 0;
+}
+
+.menu-item{
+  position: relative;
+}
+
+.menu-item:hover{
+  background-color: #202020;
+}
+
+/*selector > hijo directo*/
+.menu-item:hover > .submenu{
+  display: block;
+}
+
+.menu-link{
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  padding: 1.5em 2em;
+  font-size: .8em;
+}
+
+/* ----------------------------------------------------------*/
+.tools__bar{
+  display: inline-block;
+  width: fit-content;
+  height: 100%;
+  background-color: var(--c2);
+}
+
+.tool{
+ width: 5vw;
+ height: 5vw;
+ cursor: pointer;
+}
+.tool:hover{
+  background-color: #202020;
+}
+.color__pallette{
+  float: right;
+  right: 0;
+  width: 15vw;
+  height: 100%;
+  background-color: var(--c2);
+}
+
+
+
+
+
+.row{
+  display: table;
+}
+.box {
+  width: 10vh;
+  height: 10vh;
+  background-color: red;
+  border: 1px solid #000;
+  display: flex;
+  float: left;
+}
+.input{
+  position: absolute;
+  top: 0;
+}
+
+
+
+
+.color__pallette{
+  float: right;
+  width: 15vw;
+  height: 100%;
+  background-color: #1c1b1c;
+}
+#sec1, #sec2 {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.inp1 {
+  -webkit-appearance: none;
+  width: 176.4750061035156px;
+  height: 8px;
+  background: black;
+  border-radius: 20px;
+  margin: 10px;
+  
+}
+.inp1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: red;
+  border: solid 3px white;
+}
+#inp1::-webkit-slider-thumb {
+  background: var(--color1);
+  cursor: pointer;
+}
+#inp2::-webkit-slider-thumb {
+  background: var(--color2);
+  cursor: pointer;
+}
+#inp3::-webkit-slider-thumb {
+  background: var(--color3);
+  cursor: pointer;
+}
+#view {
+  width: 200px;
+  height: 150px;
+  background: white;
+  border-radius: 10px;
+}
+
+
+/* ----------------------------------------------------------*/
+.ontop {
+  z-index: 998;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  position: absolute;				
+  background-color: var(--c3);
+  opacity: .9;
+  filter: alpha(opacity = 50);
+  font-family: 'Press Start 2P', sans-serif;
+ 
+}
+
+#popup {
+  padding: .7vw;
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  color: #ffffff;
+  background-color: var(--c2);
+  /* To align popup window at the center of screen*/
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#popup a{
+  color: #ffffff;
+  text-decoration: none;
+  float: right;
+}
+#popup input[type=number] {
+  background-color: var(--c3);
+  border-radius: 5px;
+  height: 1.7vw;
+  color: white;
+  font-size: .8em;
+}
+#popup .create{
+  background-color: var(--c1);
+  padding: .7vw;
+  margin-top: 30px;
+  border-radius: 5px;
+  color: #ffffff;
+  float: right;
+}
+
+canvas{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
