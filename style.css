@@ -1,244 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-*{
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
 }
-*:focus {
-  outline: none;
+
+body {
+  color: #000;
+  background: #fff;
+  padding-top: 5vh;
 }
+
 :root {
-  --c1: #1c1b1c;
-  --c2: #1c1b1c;
-  --c3: #1c1b1c;
-  --color1:hsl(180, 100%, 50%);
-  --color2:hsl(180, 50%, 50%);
-  --color3:hsl(180, 100%, 50%);
+  --c1: #ffde77;
+  --c2: #fec578;
+  --c3: #f9a870;
+  --c4: #f7966b;
+  --c5: #f28c7c;
+  --c6: #f57871;
+  --c7: #d881b6;
+  --c8: #816aae;
+  --c9: #5464af;
+  --c10: #5d8bc9;
+  --c11: #4cc7dd;
+  --c12: #57c4c7;
+  --c13: #5cc4b1;
+  --c14: #65c294;
+  --c15: #acd589;
+  --c16: #d7e37d;
+  --fontSize:calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+  --boxSize:calc(80px + (50 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
-.App{
-  width: 100%;
-  height: 100%;
-  
-  font-family: 'Press Start 2P', sans-serif;
+@media (min-width: 576px) {
+  :root {
+    --size-divisor: 1;
+  }
 }
-.content{
-  overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
-  background-color: #242424;
+@media (min-width: 768px) {
+  :root {
+    --size-divisor: 0.9;
+  }
 }
-.material-icons{
-  font-size: 40px;
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  color: #e6e6e6;
+@media (min-width: 992px) { 
+  :root {
+    --size-divisor: 0.7;
+  }
 }
-.container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media (min-width: 1200px) { 
+  :root {
+    --size-divisor: .67;
+  }
 }
 
+/* ------------------- Header -------------------- */
 
-/* ----------------------------------------------------------*/
-
-.menu{
-  list-style: none;
-  display: flex;
-  background-color: var(--c2);
+.tittle {
+  text-align: center;
 }
-
-.submenu{
-  display: none;
-  position: absolute;
-  top: 100%;
-}
-
-.submenu .submenu{
-  left: 100%;
-  top: 0;
-}
-
-.menu-item{
-  position: relative;
-}
-
-.menu-item:hover{
-  background-color: #202020;
-}
-
-/*selector > hijo directo*/
-.menu-item:hover > .submenu{
-  display: block;
-}
-
-.menu-link{
+a {
   text-decoration: none;
-  color: #ffffff;
-  display: block;
-  padding: 1.5em 2em;
-  font-size: .8em;
 }
-
-/* ----------------------------------------------------------*/
-.tools__bar{
-  display: inline-block;
-  width: fit-content;
-  height: 100%;
-  background-color: var(--c2);
+.nav {
+  text-align: center;
+  font-size: var(--fontSize);
+  margin: 20px 0px 20px 0px;
 }
-
-.tool{
- width: 5vw;
- height: 5vw;
- cursor: pointer;
+.nav > a{
+  padding: 5px 5px 5px 5px;
+  margin: 10px 15px 10px 15px;
 }
-.tool:hover{
-  background-color: #202020;
-}
-.color__pallette{
-  float: right;
-  right: 0;
-  width: 15vw;
-  height: 100%;
-  background-color: var(--c2);
-}
-
-
-
-
-
-.row{
-  display: table;
-}
-.box {
-  width: 10vh;
-  height: 10vh;
-  background-color: red;
-  border: 1px solid #000;
-  display: flex;
-  float: left;
-}
-.input{
-  position: absolute;
-  top: 0;
-}
-
-
-
-
-.color__pallette{
-  float: right;
-  width: 15vw;
-  height: 100%;
-  background-color: #1c1b1c;
-}
-#sec1, #sec2 {
-  display: flex;
-  flex-direction: column;
-  margin: 15px;
-}
-
-.inp1 {
-  -webkit-appearance: none;
-  width: 176.4750061035156px;
-  height: 8px;
-  background: black;
-  border-radius: 20px;
+hr.line {
+  border-top: 3px dashed var(--c6);
   margin: 10px;
-  
 }
-.inp1::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: red;
-  border: solid 3px white;
-}
-#inp1::-webkit-slider-thumb {
-  background: var(--color1);
-  cursor: pointer;
-}
-#inp2::-webkit-slider-thumb {
-  background: var(--color2);
-  cursor: pointer;
-}
-#inp3::-webkit-slider-thumb {
-  background: var(--color3);
-  cursor: pointer;
-}
-#view {
-  width: 200px;
-  height: 150px;
-  background: white;
-  border-radius: 10px;
-}
-
-
-/* ----------------------------------------------------------*/
-.ontop {
-  z-index: 998;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: none;
-  position: absolute;				
-  background-color: var(--c3);
-  opacity: .9;
-  filter: alpha(opacity = 50);
-  font-family: 'Press Start 2P', sans-serif;
- 
-}
-
-#popup {
-  padding: .7vw;
-  width: 300px;
-  height: 200px;
-  position: absolute;
-  color: #ffffff;
-  background-color: var(--c2);
-  /* To align popup window at the center of screen*/
-  top: 50%;
-  left: 50%;
-  margin-top: -100px;
-  margin-left: -150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#popup a{
-  color: #ffffff;
-  text-decoration: none;
-  float: right;
-}
-#popup input[type=number] {
-  background-color: var(--c3);
-  border-radius: 5px;
-  height: 1.7vw;
-  color: white;
-  font-size: .8em;
-}
-#popup .create{
-  background-color: var(--c1);
-  padding: .7vw;
-  margin-top: 30px;
-  border-radius: 5px;
-  color: #ffffff;
-  float: right;
-}
-
-canvas{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.about {
+  padding: 0 2vw 0 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(500px / var(--size-divisor));
+  border: 2px #4cc7dd solid;
+  /* calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));*/
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
