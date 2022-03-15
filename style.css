@@ -59,8 +59,22 @@ body {
 /* ------------------- Header -------------------- */
 
 .tittle {
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+  width: fit-content;
 }
+.tittle:after {
+  position: relative;
+  display: block;
+  content: "";
+  background: var(--c1);
+  z-index: -5;
+  height: 15px;
+  top: -20px;
+  left: 20px;
+}
+
 a {
   text-decoration: none;
 }
@@ -71,11 +85,18 @@ a {
 }
 .nav > a{
   padding: 5px 5px 5px 5px;
-  margin: 10px 15px 10px 15px;
+  margin: 15px 15px 10px 15px;
+  font-weight: 700;
+  color: #000;
 }
+.nav >a:hover {
+  color: var(--c6);
+  text-decoration: underline;
+}
+
 hr.line {
-  border-top: 3px dashed var(--c6);
-  margin: 10px;
+  border-top: 3px dashed var(--c12);
+  margin: 15px 5vw 25px 5vw;
 }
 .about {
   padding: 0 5vw 0 5vw;
