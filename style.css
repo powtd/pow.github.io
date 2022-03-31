@@ -30,51 +30,67 @@ body {
   --c14: #65c294;
   --c15: #acd589;
   --c16: #d7e37d;
+  --c-item: #151a26;
   --fontSize18: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   --fontSize20: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
   --frontSizeh2: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+  --frontSizeh1: calc(32px + (32 - 32) * ((100vw - 300px) / (1600 - 300)));
 }
-
+@media (max-width: 576px) {
+  .work-container {
+    grid-template-columns: 100%;
+  }
+}
 @media (min-width: 576px) {
   :root {
     --size-divisor: 1;
+  }
+  .work-container {
+    grid-template-columns: 100%;
   }
 }
 @media (min-width: 768px) {
   :root {
     --size-divisor: 0.9;
   }
+  .work-container {
+    grid-template-columns: 100%;
+  }
 }
 @media (min-width: 992px) {
   :root {
     --size-divisor: 0.7;
+  }
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 1200px) {
   :root {
     --size-divisor: 0.67;
   }
+  .work-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ------------------- Header -------------------- */
 
-.tittle {
+.p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: var(--frontSizeh1);
+  font-weight: bold;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: fit-content;
 }
 
-.tittle:after {
-  position: relative;
-  display: block;
-  content: "";
-  background: var(--c1);
-  z-index: -5;
-  height: 20px;
-  width: 60px;
-  top: -35px;
-  left: 20px;
+#name {
+  color: #f37973;
+  letter-spacing: 4px;
 }
 
 a {
@@ -83,17 +99,17 @@ a {
 .nav {
   text-align: center;
   font-size: var(--fontSize20);
-  margin: 20px 5vw 20px 5vw;
+  margin: 25px 5vw 25px 5vw;
   display: grid;
   grid-template-columns: auto auto auto auto;
   width: calc(550px / var(--size-divisor));
   margin-left: auto;
   margin-right: auto;
+  border: 3px#222 solid;
 }
 .nav > a {
   font-weight: 700;
   color: #000;
-  border: 3px#000 solid;
   text-align: center;
 }
 .nav > a:hover {
@@ -115,6 +131,7 @@ hr.line {
   /* calc([min size] + ([max size] - [min size]) * ((100vw - [min viewport width]) / ([max viewport width] - [min viewport width])));*/
   font-size: var(--fontSize18);
   text-align: center;
+  line-height: 1.6;
 }
 
 /*---------------  tag  -----------------*/
@@ -123,59 +140,216 @@ hr.line {
   margin-left: auto;
   margin-right: auto;
   width: calc(550px / var(--size-divisor));
-  
 }
 .tag > p {
   font-size: var(--frontSizeh2);
 }
 
-.tag-container{
+.tag-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
 }
-.tag-item{
-  border: 3px#000 solid;
+.tag-item {
+  border: 3px#222 solid;
   width: fit-content;
   padding: 8px;
   margin: 6px;
   font-size: var(--fontSize18);
+  font-weight: 600;
+  color: var(--c-item);
+  box-shadow: 8px 8px;
 }
 
-.i1{
+.i1 {
   background-color: var(--c16);
 }
-.i2{
+.i2 {
   background-color: var(--c15);
 }
-.i3{
+.i3 {
   background-color: var(--c14);
 }
-.i4{
+.i4 {
   background-color: var(--c13);
 }
-.i5{
+.i5 {
   background-color: var(--c12);
 }
-.i6{
+.i6 {
   background-color: var(--c10);
 }
-.i7{
+.i7 {
   background-color: var(--c8);
 }
-.i8{
+.i8 {
   background-color: var(--c7);
 }
 
-.tag-item:hover{
+.tag-item:hover {
   cursor: default;
-  transition: transform .2s;
+  transition: transform 0.2s;
   transform: rotate(14deg);
 }
 /*----------------- work ----------------------*/
-.work{
+.work {
   padding: 40px 5vw 0 5vw;
   margin-left: auto;
   margin-right: auto;
-  width: calc(550px / var(--size-divisor));
+  width: calc(620px / var(--size-divisor));
+  margin-top: 15px;
 }
+.work-tittle {
+  font-weight: 800;
+  font-size: var(--frontSizeh1);
+}
+.work-container {
+  display: grid;
+  justify-content: start;
+  grid-gap: 1rem;
+  margin-top: 10px;
+}
+.work-item {
+  position: relative;
+  height: fit-content;
+  border: 3px #222 solid;
+  color: rgba(0, 0, 0, 0.774);
+  padding: 10px;
+  font-size: var(--fontSize18);
+  line-height: 1.6;
+  box-shadow: 5px 5px;
+}
+
+.work-item > .click {
+  margin: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  font-weight: 700;
+  font-size: var(--frontSizeh2);
+}
+.work-name {
+  font-size: var(--fontSize20);
+  font-weight: 800;
+  color: #000;
+}
+.work-name:hover {
+  text-decoration: underline;
+  color: var(--c6);
+}
+/*----------------- demo----------------------*/
+.demo {
+  padding: 40px 5vw 0 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(620px / var(--size-divisor));
+  margin-top: 15px;
+}
+.demo-p {
+  font-size: var(--fontSize18);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.demo-p > a {
+  text-decoration: underline;
+  color: #000;
+  transition: all 0.3s;
+}
+.demo-p > a:hover {
+  background-color: var(--c9);
+}
+/*----------------- git----------------------*/
+.ach {
+  padding: 40px 5vw 0 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(620px / var(--size-divisor));
+  margin-top: 15px;
+}
+.drop-container{
+  margin-top: 15px;
+}
+.wrapper {
+  border: 3px #222 solid;
+  border-bottom: 0 ;
+}
+.wrapper-b {
+  border: 3px #222 solid;
+  
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=checkbox] ~ label {
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+  font-size: var(--fontSize18);
+}
+input[type=checkbox]:checked ~ label ~ .content { 
+  display: block;
+}
+.content {
+  padding: 10px;
+  display: none;
+  clear: both;
+  text-align: center;
+}
+.content > img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*jjjkjkl*/
+input[type=checkbox]:checked ~ label ~ .content1 { 
+  display: block;
+}
+.content1 {
+  padding: 10px;
+  display: none;
+  clear: both;
+  text-align: center;
+}
+.content1 > img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=checkbox]:checked ~ label ~ .content2 { 
+  display: block;
+}
+
+.content2 {
+  padding: 10px;
+  display: none;
+  clear: both;
+  text-align: center;
+}
+.content2 > img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type=checkbox]:checked ~ label ~ .content3 { 
+  display: block;
+}
+.content3 {
+  padding: 10px;
+  display: none;
+  clear: both;
+  text-align: center;
+}
+.content3 > img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
