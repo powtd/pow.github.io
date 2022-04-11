@@ -19,13 +19,13 @@
             <p id="name">&sol;&gt;</p>
         </div>
         <div class="nav">
-            <a href="#">About</a>
-            <a href="#">Work</a>
-            <a href="#">Demo</a>
-            <a href="#">Resource</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#demo">Demo</a>
+            <a href="#resource">Resource</a>
         </div>
 
-        <p class="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+        <p class="about" id="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
             has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
             of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also
             the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
@@ -54,7 +54,7 @@
 
 
 
-    <section class="work">
+    <section class="work" id="work">
         <h2 class="work-tittle">Works</h2>
         <div class="work-container">
             <a href="#">
@@ -93,7 +93,7 @@
         </div>
     </section>
 
-    <section class="demo">
+    <section class="demo" id="demo">
         <h2 class="work-tittle">Demo</h2>
         <p class="demo-p">Here! some of my demos on <a href="https://codepen.io/peralP" target="blank">Codepen</a></p>
         <div>
@@ -108,7 +108,7 @@
         </div>
 
     </section>
-    <section class="ach">
+    <section class="ach" id="resource">
         <span class="work-tittle">achievement</span>
 
 
@@ -118,6 +118,7 @@
                 <div class="inner">
                     <input type="checkbox" id="toggle">
                     <label for="toggle">Click me</label>
+                    <span class="r">&raquo;</span>
                     <div class="content">
                         <img src="UC-b782fe51-c9bb-4db3-aac3-0b8974ef386e.jpg" alt="c1">
                         <p>Some information to be hidden along with this div.</p>
@@ -129,6 +130,7 @@
                 <div class="inner">
                     <input type="checkbox" id="toggle1">
                     <label for="toggle1">Click me</label>
+                    <span class="r">&raquo;</span>
                     <div class="content1">
                         <img src="UC-b782fe51-c9bb-4db3-aac3-0b8974ef386e.jpg" alt="c2">
                         <p>Some information to be hidden along with this div.</p>
@@ -140,6 +142,7 @@
                 <div class="inner">
                     <input type="checkbox" id="toggle2">
                     <label for="toggle2">Click me</label>
+                    <span class="r">&raquo;</span>
                     <div class="content2">
                         <img src="UC-b782fe51-c9bb-4db3-aac3-0b8974ef386e.jpg" alt="c3">
                         <p>Some information to be hidden along with this div.</p>
@@ -151,6 +154,7 @@
                 <div class="inner">
                     <input type="checkbox" id="toggle3">
                     <label for="toggle3">Click me</label>
+                    <span class="r">&raquo;</span>
                     <div class="content3">
                         <img src="UC-b782fe51-c9bb-4db3-aac3-0b8974ef386e.jpg" alt="c4">
                         <p>Some information to be hidden along with this div.</p>
@@ -159,9 +163,23 @@
             </div>
         </div>
     </section>
+    <section class="resume">
+        <a href="/diagram.pdf" class="resume-butt" download="newfilename">Download the pdf</a>
+
+    </section>
+    <footer>
+        <div class="social">
+            <a href="https://codepen.io/peralP" target="_blank"><i class="fab fa-codepen"></i></a>
+            <a href="https://github.com/pperal" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=pphruksachat@gmail.com" target="_blank"><i
+                    class="fas fa-at"></i></a>
+            <span id="c"> | pperal&copy;2021</span>
+        </div>
+
+    </footer>
 
 
-
+    <script src="https://kit.fontawesome.com/fc067101bd.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

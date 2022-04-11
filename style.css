@@ -6,6 +6,9 @@
   box-sizing: border-box;
   font-family: "JetBrains Mono", monospace;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: #000;
@@ -105,7 +108,7 @@ a {
   width: calc(550px / var(--size-divisor));
   margin-left: auto;
   margin-right: auto;
-  border: 3px#222 solid;
+  border: 3px #222 solid;
 }
 .nav > a {
   font-weight: 700;
@@ -151,7 +154,7 @@ hr.line {
   margin-top: 10px;
 }
 .tag-item {
-  border: 3px#222 solid;
+  border: 3px #222 solid;
   width: fit-content;
   padding: 8px;
   margin: 6px;
@@ -259,7 +262,7 @@ hr.line {
 .demo-p > a:hover {
   background-color: var(--c9);
 }
-/*----------------- git----------------------*/
+/*----------------- resources ----------------------*/
 .ach {
   padding: 40px 5vw 0 5vw;
   margin-left: auto;
@@ -269,6 +272,7 @@ hr.line {
 }
 .drop-container{
   margin-top: 15px;
+  box-shadow: 7px 7px;
 }
 .wrapper {
   border: 3px #222 solid;
@@ -352,4 +356,31 @@ input[type=checkbox]:checked ~ label ~ .content3 {
   margin-left: auto;
   margin-right: auto;
 }
+.inner{
+  position: relative;
+}
+.inner > .r{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+  font-weight: 700;
+  font-size: var(--frontSizeh2);
+}
+/*---------------------resume---------------------------*/
+.resume-butt{
+  width: 50vw;
 
+}
+/*---------------------footer---------------------------*/
+.social {
+  margin: 7vw auto;
+  text-align: center;
+}
+.social > a {
+  font-size: var(--frontSizeh2);
+  color: #000;
+}
+.social > a:hover {
+  color: var(--c8);
+}
