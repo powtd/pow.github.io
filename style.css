@@ -92,8 +92,17 @@ body {
 }
 
 #name {
-  color: #f37973;
+  animation: color-change 2s infinite;
   letter-spacing: 4px;
+}
+
+@keyframes color-change {
+  0% { color: var(--c4); }
+  20% { color: var(--c6); }
+  40% { color: var(--c8); }
+  60% { color: var(--c9); }
+  80% { color: var(--c12); }
+  100% { color: var(--c14); }
 }
 
 a {
@@ -187,6 +196,15 @@ hr.line {
 }
 .i8 {
   background-color: var(--c7);
+}
+.i9{
+  background-color: var(--c6);
+}
+.i10{
+  background-color: var(--c4);
+}
+.i11{
+  background-color: var(--c2);
 }
 
 .tag-item:hover {
