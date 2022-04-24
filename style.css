@@ -34,6 +34,7 @@ body {
   --c15: #acd589;
   --c16: #d7e37d;
   --c-item: #151a26;
+  --fontSize14: calc(14px + (14 - 14) * ((100vw - 300px) / (1600 - 300)));
   --fontSize18: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
   --fontSize20: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
   --frontSizeh2: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
@@ -258,6 +259,25 @@ hr.line {
 .work-name:hover {
   text-decoration: underline;
   color: var(--c6);
+}
+.tool{
+  margin-top: 3px;
+}
+.tool > span{
+  padding: 1px;
+  font-size: var(--fontSize14);
+}
+.js{
+  background-color: #f0db4f;
+  margin-right: 2px;
+}
+.css{
+  background-color: #563d7c;
+  margin: 2px;
+}
+.html{
+  background-color: #e34c26;
+  margin: 2px;
 }
 /*----------------- demo----------------------*/
 .demo {
